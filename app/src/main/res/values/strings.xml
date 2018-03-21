@@ -1,0 +1,40 @@
+<resources>
+    <!--App title-->
+    <string name="app_name">Popular Movies</string>
+    <!--Movie Details activity name-->
+    <string name="app_details_activity">Movie Details</string>
+    <!--Dummy movie title-->
+    <string name="movie_title">Movie Title</string>
+    <!--Menu Now playing title-->
+    <string name="menu_now_playing">Now playing</string>
+    <!--Menu High rated title-->
+    <string name="menu_high_rated">High rated</string>
+    <!--Menu Most popular title title-->
+    <string name="menu_most_popular">Most popular</string>
+    <!--Menu refresh-->
+    <string name="menu_refresh">Refresh</string>
+    <!--Dummy movie date-->
+    <string name="movie_date">01–01–2000</string>
+    <!--Dummy content description string-->
+    <string name="movie_poster">Movie poster</string>
+    <!--Dummy movie rating-->
+    <string name="movie_rating">10.0</string>
+    <!--Dummy movie rating-->
+    <string name="out_of_rating">/10</string>
+    <!--Dummy movie plot-->
+    <string name="movie_plot">This is movie plot.</string>
+    <!--Error Message unable to load movies-->
+    <string name="error_message">Unable to load movies. Please tap the refresh icon at the top menu bar to refresh.</string>
+    <!--Error Message no internet connection-->
+    <string name="error_message_no_internet">There is no internet connection. Please switch on internet connection and try refreshing again.</string>
+    <!--Static Release Date text-->
+    <string name="static_release_date_text">Release Date</string>
+    <!--Static Rating text-->
+    <string name="static_rating_text">Rating</string>
+    <!--Extra text to be put in Intent-->
+    <string name="intent_movie_title">Title</string>
+    <string name="intent_movie_plot">Plot</string>
+    <string name="intent_movie_rating">Rating</string>
+    <string name="intent_movie_release">Release</string>
+    <string name="intent_movie_poster">Poster</string>
+</resources>

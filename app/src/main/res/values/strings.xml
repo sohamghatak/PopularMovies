@@ -32,9 +32,5 @@
     <!--Static Rating text-->
     <string name="static_rating_text">Rating</string>
     <!--Extra text to be put in Intent-->
-    <string name="intent_movie_title">Title</string>
-    <string name="intent_movie_plot">Plot</string>
-    <string name="intent_movie_rating">Rating</string>
-    <string name="intent_movie_release">Release</string>
-    <string name="intent_movie_poster">Poster</string>
+    <string name="intent_movies">Movies</string>
 </resources>

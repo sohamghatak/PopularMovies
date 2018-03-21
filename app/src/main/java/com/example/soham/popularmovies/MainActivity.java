@@ -27,23 +27,31 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity implements MovieAdapter.MovieAdapterOnClickHandler {
 
-    private RecyclerView mRecyclerView;
+    //private RecyclerView mRecyclerView;
     private MovieAdapter mMovieAdapter;
-    private TextView mErrorMessage;
-    private ProgressBar mLoadingIndicator;
+    //private TextView mErrorMessage;
+    //private ProgressBar mLoadingIndicator;
     //Local variable to store the menu item id clicked
     private int itemId;
     private boolean connection;
+    //Using ButterKnife to bind views
+    @BindView(R.id.pm_recycler_view)
+    RecyclerView mRecyclerView;
+    @BindView(R.id.pm_error_message)
+    TextView mErrorMessage;
+    @BindView(R.id.pm_loading_indicator)
+    ProgressBar mLoadingIndicator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mRecyclerView = findViewById(R.id.pm_recycler_view);
-        mErrorMessage = findViewById(R.id.pm_error_message);
-        mLoadingIndicator = findViewById(R.id.pm_loading_indicator);
+        ButterKnife.bind(this);
         mLoadingIndicator.setVisibility(View.VISIBLE);
         //GridLayoutManager to populate a grid layout
         GridLayoutManager gridLayoutManager = new GridLayoutManager
@@ -77,11 +85,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
         Context context = this;
         Class destinationClass = DetailActivity.class;
         Intent intentToStartDetailActivity = new Intent(context, destinationClass);
-        intentToStartDetailActivity.putExtra(String.valueOf(R.string.intent_movie_title), movies.getMovieTitle());
-        intentToStartDetailActivity.putExtra(String.valueOf(R.string.intent_movie_plot), movies.getMoviePlot());
-        intentToStartDetailActivity.putExtra(String.valueOf(R.string.intent_movie_rating), movies.getMovieRating());
-        intentToStartDetailActivity.putExtra(String.valueOf(R.string.intent_movie_release), movies.getReleaseDate());
-        intentToStartDetailActivity.putExtra(String.valueOf(R.string.intent_movie_poster), movies.getMoviePoster());
+        intentToStartDetailActivity.putExtra(String.valueOf(R.string.intent_movies), movies);
         startActivity(intentToStartDetailActivity);
     }
 

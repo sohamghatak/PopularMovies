@@ -21,6 +21,7 @@ public final class NetworkUtils {
 
     //Static BASE URL and API_KEY static variable
     private final static String MOVIES_BASE_URL = "http://api.themoviedb.org/3/movie";
+    //Enter your API key here
     private final static String apiKey = "";
     private final static String API_KEY = "api_key";
 

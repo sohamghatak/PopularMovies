@@ -91,7 +91,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieAdapter
     public void onBindViewHolder(MovieAdapterViewHolder holder, int position) {
         Movies movies = mMovies.get(position);
         Uri posterUri = Uri.parse(movies.getMoviePoster());
-        Picasso.with(context).load(posterUri).into(holder.mMoviePoster);
+
+        Picasso.with(context)
+                .load(posterUri)
+                .placeholder(R.drawable.ic_movie_white_48dp)
+                .error(R.drawable.ic_error_outline_white_48dp)
+                .into(holder.mMoviePoster);
     }
 
     /**

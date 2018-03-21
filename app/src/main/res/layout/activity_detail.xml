@@ -1,65 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.soham.popularmovies.MainActivity">
+    android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/pm_image_poster"
-        style="@style/ImageViewStyle"
-        android:contentDescription="@string/movie_poster"
-        android:src="@mipmap/ic_launcher" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.soham.popularmovies.MainActivity">
 
-    <TextView
-        android:id="@+id/pm_movie_title"
-        style="@style/TextViewStyle"
-        android:layout_toRightOf="@+id/pm_image_poster"
-        android:textStyle="bold"
-        tools:text="@string/movie_title" />
+        <ImageView
+            android:id="@+id/pm_image_poster"
+            style="@style/ImageViewStyle"
+            android:contentDescription="@string/movie_poster"
+            android:src="@mipmap/ic_launcher" />
 
-    <TextView
-        style="@style/StaticMovieDetailText"
-        android:layout_below="@+id/pm_movie_title"
-        android:layout_toRightOf="@id/pm_image_poster"
-        android:text="@string/static_release_date_text"
-        android:textColor="@color/releaseStaticTextColor" />
+        <TextView
+            android:id="@+id/pm_movie_title"
+            style="@style/TextViewStyle"
+            android:layout_toRightOf="@+id/pm_image_poster"
+            android:textStyle="bold"
+            tools:text="@string/movie_title" />
 
-
-    <TextView
-        android:id="@+id/pm_release_date"
-        style="@style/TextViewStyle"
-        android:layout_below="@+id/pm_movie_title"
-        android:layout_toRightOf="@+id/pm_image_poster"
-        tools:text="@string/movie_date" />
-
-    <TextView
-        style="@style/StaticMovieDetailText"
-        android:layout_below="@+id/pm_release_date"
-        android:layout_toRightOf="@id/pm_image_poster"
-        android:text="@string/static_rating_text"
-        android:textColor="@color/ratingStaticTextColor" />
-
-    <TextView
-        android:id="@+id/pm_movie_rating"
-        style="@style/TextViewStyle"
-        android:layout_below="@+id/pm_release_date"
-        android:layout_toRightOf="@+id/pm_image_poster"
-        tools:text="@string/movie_rating" />
-
-    <TextView
-        android:id="@+id/pm_out_of_rating"
-        style="@style/OutOfRatingStyle"
-        android:layout_below="@+id/pm_release_date"
-        android:layout_toRightOf="@+id/pm_movie_rating"
-        android:text="@string/out_of_rating" />
+        <TextView
+            style="@style/StaticMovieDetailText"
+            android:layout_below="@+id/pm_movie_title"
+            android:layout_toRightOf="@id/pm_image_poster"
+            android:text="@string/static_release_date_text"
+            android:textColor="@color/releaseStaticTextColor" />
 
 
-    <TextView
-        android:id="@+id/pm_movie_plot"
-        style="@style/PlotTextViewStyle"
-        android:layout_below="@+id/pm_image_poster"
-        tools:text="@string/movie_plot" />
+        <TextView
+            android:id="@+id/pm_release_date"
+            style="@style/TextViewStyle"
+            android:layout_below="@+id/pm_movie_title"
+            android:layout_toRightOf="@+id/pm_image_poster"
+            tools:text="@string/movie_date" />
 
-</RelativeLayout>
+        <TextView
+            style="@style/StaticMovieDetailText"
+            android:layout_below="@+id/pm_release_date"
+            android:layout_toRightOf="@id/pm_image_poster"
+            android:text="@string/static_rating_text"
+            android:textColor="@color/ratingStaticTextColor" />
 
+        <TextView
+            android:id="@+id/pm_movie_rating"
+            style="@style/TextViewStyle"
+            android:layout_below="@+id/pm_release_date"
+            android:layout_toRightOf="@+id/pm_image_poster"
+            tools:text="@string/movie_rating" />
+
+        <TextView
+            android:id="@+id/pm_out_of_rating"
+            style="@style/OutOfRatingStyle"
+            android:layout_below="@+id/pm_release_date"
+            android:layout_toRightOf="@+id/pm_movie_rating"
+            android:text="@string/out_of_rating" />
+
+
+        <TextView
+            android:id="@+id/pm_movie_plot"
+            style="@style/PlotTextViewStyle"
+            android:layout_below="@+id/pm_image_poster"
+            tools:text="@string/movie_plot" />
+
+    </RelativeLayout>
+
+</ScrollView>
